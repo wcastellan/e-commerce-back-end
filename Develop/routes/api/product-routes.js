@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
       ]
     }
   )
-  .then(ptoductData => res.json(productData))
+  .then(productData => res.json(productData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
       attributes: ['category_name']
     },
     {
-      modle: Tag,
+      model: Tag,
       attributes: ['tag_name']
     }
   ]
